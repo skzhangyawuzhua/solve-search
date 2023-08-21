@@ -1,5 +1,6 @@
-### solve-search 
+## solve-search 
     解析url里的search部分 将其转换为便于使用的键值对
+    *兼容完整url及单独的search部分 详情可见test
 
 ### 安装
     pnpm add solve-search

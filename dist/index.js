@@ -1,18 +1,26 @@
+const reg = /^(?!&)[^&]*&.*=/;
 const solve_search = (query_string) => {
-    let query = {};
-    console.log("query_string:", query_string);
-    if (query_string.includes("?")) {
-        query_string = query_string.split("?")[1];
+    try {
+        if (!reg.test(query_string)) {
+            throw new Error("unexpect string");
+        }
+        if (query_string.includes("?")) {
+            query_string = query_string.split("?")[1];
+        }
+        let initObj = {};
+        const query = query_string
+            .split("&")
+            .map(element => {
+            return element.split("=");
+        })
+            .reduce((p, c) => {
+            p[c[0]] = decodeURIComponent(c[1]);
+            return p;
+        }, initObj);
+        return query;
     }
-    query = query_string
-        .split("&")
-        .map(element => {
-        return element.split("=");
-    })
-        .reduce((p, c) => {
-        p[c[0]] = decodeURIComponent(c[1]);
-        return p;
-    }, {});
-    return query;
+    catch (e) {
+        return null;
+    }
 };
 export default solve_search;
