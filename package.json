@@ -1,6 +1,6 @@
 {
   "name": "solve-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "处理url的search部分 string -> key-value",
   "main": "dist/index.js",
   "scripts": {
