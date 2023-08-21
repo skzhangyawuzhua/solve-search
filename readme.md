@@ -12,4 +12,4 @@
 ```
 
 ### 测试
-    pnpm test
+    pnpm install && pnpm test
