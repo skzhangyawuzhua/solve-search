@@ -1,0 +1,32 @@
+{
+  "name": "solve-search",
+  "version": "1.0.0",
+  "description": "处理url的search部分 string -> key-value",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest test/test.ts",
+    "build": "tsc",
+    "pub": "npm version patch && git push && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skzhangyawuzhua/solve-search.git"
+  },
+  "keywords": [
+    "url",
+    "location",
+    "search"
+  ],
+  "author": "zhangyawuzhua",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skzhangyawuzhua/solve-search/issues"
+  },
+  "homepage": "https://github.com/skzhangyawuzhua/solve-search#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}
